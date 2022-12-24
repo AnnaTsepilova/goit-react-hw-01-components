@@ -1,16 +1,19 @@
-export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
-  );
-};
+import UserProfile from '../components/UserProfile';
+import user from 'user.json';
+
+export default function App() {
+  return <div>
+    <UserProfile
+      avatarSrc={user.avatar}
+      userName={user.username}
+      userTag={user.tag}
+      location={user.location}
+      followersQuantity={user.stats.followers}
+      viewsQuantity={user.stats.views}
+      likesQuantity={user.stats.likes}
+    />
+  </div>;
+  
+}
+  
+
