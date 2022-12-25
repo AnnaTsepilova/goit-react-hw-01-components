@@ -1,10 +1,13 @@
 {
   "files": {
-    "main.js": "/AnnaTsepilova/goit-react-hw-01-components/static/js/main.6e9e0c31.js",
+    "main.css": "/AnnaTsepilova/goit-react-hw-01-components/static/css/main.ca1dc70d.css",
+    "main.js": "/AnnaTsepilova/goit-react-hw-01-components/static/js/main.ecacabb6.js",
     "index.html": "/AnnaTsepilova/goit-react-hw-01-components/index.html",
-    "main.6e9e0c31.js.map": "/AnnaTsepilova/goit-react-hw-01-components/static/js/main.6e9e0c31.js.map"
+    "main.ca1dc70d.css.map": "/AnnaTsepilova/goit-react-hw-01-components/static/css/main.ca1dc70d.css.map",
+    "main.ecacabb6.js.map": "/AnnaTsepilova/goit-react-hw-01-components/static/js/main.ecacabb6.js.map"
   },
   "entrypoints": [
-    "static/js/main.6e9e0c31.js"
+    "static/css/main.ca1dc70d.css",
+    "static/js/main.ecacabb6.js"
   ]
 }
