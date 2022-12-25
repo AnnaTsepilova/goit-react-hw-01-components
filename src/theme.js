@@ -10,17 +10,17 @@ export const theme = {
   space: [0, 2, 4, 6, 8, 16, 32, 64, 128, 256],
 
   fonts: {
-    body: 'Helvetica, sans-serif',
+    body: 'Poppins, sans-serif',
     heading: 'Roboto, sans-serif',
     monospace: 'monospace',
   },
 
   fontSizes: {
-    xs: 12,
-    s: 14,
-    m: 16,
-    l: 32,
-    xl: 64,
+    xs: 14,
+    s: 16,
+    m: 24,
+    l: 28,
+    xl: 32,
   },
   fontWeights: {
     normal: 400,

@@ -1,6 +1,7 @@
 import UserProfile from 'components/UserProfile/UserProfile';
-import UserStats from 'components/UserStats/UserStats';
+import Statistics from 'components/Statistics/Statistics';
 import user from 'user.json';
+import data from 'data.json';
 import Section from 'components/Section/Section';
 
 export default function App() {
@@ -11,12 +12,11 @@ export default function App() {
         userName={user.username}
         userTag={user.tag}
         location={user.location}
-      />
-      <UserStats
         followersQuantity={user.stats.followers}
         viewsQuantity={user.stats.views}
         likesQuantity={user.stats.likes}
       />
+      <Statistics />
     </Section>
   );
 }
