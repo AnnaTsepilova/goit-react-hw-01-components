@@ -1,5 +1,5 @@
-import css from './Section.module.css';
+import { SectionCss } from './Section.styled';
 
 export default function Section({ children }) {
-  return <section className={css.section}>{children}</section>;
+  return <SectionCss>{children}</SectionCss>;
 }

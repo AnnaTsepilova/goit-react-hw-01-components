@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import css from './UserProfile.module.css';
+import { Description, Avatar, Name, Tag, Location } from './UserProfile.styled';
 
 export default function UserProfile({
   avatarSrc,
@@ -8,12 +8,12 @@ export default function UserProfile({
   location,
 }) {
   return (
-    <div className={css.description}>
-      <img src={avatarSrc} alt={userName} className={css.avatar} width="100" />
-      <p className={css.name}>{userName}</p>
-      <p className={css.tag}>@{userTag}</p>
-      <p className={css.location}>{location}</p>
-    </div>
+    <Description>
+      <Avatar src={avatarSrc} alt={userName} width="100" />
+      <Name>{userName}</Name>
+      <Tag>@{userTag}</Tag>
+      <Location>{location}</Location>
+    </Description>
   );
 }
 
