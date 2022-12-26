@@ -5,6 +5,7 @@ export const theme = {
     secondary: '#757575',
     borderColor: '#e2e8ef',
     background: '#fff',
+    backgroundSecondary: '#f2f6fa',
   },
 
   space: [0, 2, 4, 6, 8, 16, 32, 64, 128, 256],

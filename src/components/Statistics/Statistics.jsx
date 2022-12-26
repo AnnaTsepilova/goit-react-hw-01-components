@@ -1,39 +1,19 @@
-import PropTypes from 'prop-types';
-import { StatisticsContainer } from './Statistics.styled';
+import { StatisticsContainer, StatTitle, StatList } from './Statistics.styled';
+import StatItem from './StatItem';
 
-export default function Statistics({}) {
+export default function Statistics({ dataSet }) {
   return (
     <StatisticsContainer>
-      <h2 className="title">Upload stats</h2>
-
-      <ul className="stat-list">
-        <li className="item">
-          <span className="label">.docx</span>
-          <span className="percentage">4%</span>
-        </li>
-        <li className="item">
-          <span className="label">.mp3</span>
-          <span className="percentage">14%</span>
-        </li>
-        <li className="item">
-          <span className="label">.pdf</span>
-          <span className="percentage">41%</span>
-        </li>
-        <li className="item">
-          <span className="label">.mp4</span>
-          <span className="percentage">12%</span>
-        </li>
-      </ul>
+      <StatTitle>Upload stats</StatTitle>
+      <StatList>
+        {dataSet.map(item => (
+          <StatItem
+            key={item.id}
+            statLabel={item.label}
+            statPercentage={item.percentage}
+          />
+        ))}
+      </StatList>
     </StatisticsContainer>
   );
 }
-
-// UserProfile.propTypes = {
-//   avatarSrc: PropTypes.string.isRequired,
-//   userName: PropTypes.string.isRequired,
-//   userTag: PropTypes.string.isRequired,
-//   location: PropTypes.string.isRequired,
-//   followersQuantity: PropTypes.number.isRequired,
-//   viewsQuantity: PropTypes.number.isRequired,
-//   likesQuantity: PropTypes.number.isRequired,
-// };

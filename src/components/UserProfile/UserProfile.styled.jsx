@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const Description = styled.div`
   margin: auto;
-  max-width: 300px;
+  max-width: 360px;
+  margin-top: ${props => props.theme.space[7]}px;
   padding-top: ${props => props.theme.space[6]}px;
   background-color: ${props => props.theme.colors.background};
   text-align: center;
@@ -42,14 +43,13 @@ export const Location = styled.p`
 export const Stats = styled.ul`
   display: flex;
   justify-content: center;
-
   margin-top: ${props => props.theme.space[6]}px;
 
-  background-color: #f2f6fa;
+  background-color: ${props => props.theme.colors.backgroundSecondary};
 `;
 
 export const StatsCell = styled.li`
-  width: 100px;
+  width: 120px;
   display: block;
   text-align: center;
   border-top: 1px solid ${props => props.theme.colors.borderColor};
