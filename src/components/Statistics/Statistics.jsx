@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { StatisticsContainer, StatTitle, StatList } from './Statistics.styled';
 import StatItem from './StatItem';
 
@@ -17,3 +18,12 @@ export default function Statistics({ dataSet }) {
     </StatisticsContainer>
   );
 }
+
+Statistics.propTypes = {
+  dataSet: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      percentage: PropTypes.number,
+    })
+  ).isRequired,
+};

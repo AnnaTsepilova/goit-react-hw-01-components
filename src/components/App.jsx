@@ -19,30 +19,7 @@ export default function App() {
         likesQuantity={user.stats.likes}
       />
       <Statistics dataSet={data} />
-      {/* <FriendList
-        avatarSrc={friends.avatar}
-        userName={friends.name}
-        userId={friends.id}
-      /> */}
+      <FriendList friendsList={friends} />
     </Section>
   );
 }
-
-// export default function App() {
-//   return (
-//     <Section>
-//       <UserProfile
-//         avatarSrc={user.avatar}
-//         userName={user.username}
-//         userTag={user.tag}
-//         location={user.location}
-//         followersQuantity={user.stats.followers}
-//         viewsQuantity={user.stats.views}
-//         likesQuantity={user.stats.likes}
-//       />
-//     </Section>
-//     <Section>
-//         <Statistics />
-//     </Section>
-//   );
-// }
