@@ -20,7 +20,7 @@ export default function App() {
         viewsQuantity={user.stats.views}
         likesQuantity={user.stats.likes}
       />
-      <Statistics dataSet={data} />
+      <Statistics title="Upload stats" dataSet={data} />
       <FriendList friendsList={friends} />
       <TransactionHistory transactions={tableData} />
     </Section>
