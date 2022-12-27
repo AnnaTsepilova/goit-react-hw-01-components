@@ -13,7 +13,8 @@ export default function FriendItem({
 }) {
   return (
     <Item>
-      <FriendStatus color={friendStatus}></FriendStatus>
+      <FriendStatus color={friendStatus.toString()}></FriendStatus>
+      {/* <FriendStatus color={friendStatus}></FriendStatus> */}
       <FriendAvatar src={friendAvatarSrc} alt={friendName} width="48" />
       <FriendName>{friendName}</FriendName>
     </Item>

@@ -1,35 +1,39 @@
 import PropTypes from 'prop-types';
-import {} from './TransactionHistory.styled';
+import { TableContainer, TableHeadRow } from './TransactionHistory.styled';
+import TransactionRow from './TransactionRow';
 
-export default function TransactionHistory({}) {
+export default function TransactionHistory({ transactions }) {
   return (
-    <table class="transaction-history">
+    <TableContainer>
       <thead>
         <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+          <TableHeadRow>Type</TableHeadRow>
+          <TableHeadRow>Amount</TableHeadRow>
+          <TableHeadRow>Currency</TableHeadRow>
         </tr>
       </thead>
 
       <tbody>
-        <tr>
-          <td>Invoice</td>
-          <td>125</td>
-          <td>USD</td>
-        </tr>
-        <tr>
-          <td>Withdrawal</td>
-          <td>85</td>
-          <td>USD</td>
-        </tr>
+        {transactions.map(transaction => (
+          <TransactionRow
+            key={transaction.id}
+            type={transaction.type}
+            amount={transaction.amount}
+            currency={transaction.currency}
+          />
+        ))}
       </tbody>
-    </table>
+    </TableContainer>
   );
 }
 
-// TransactionHistory.propTypes = {
-//   friendAvatarSrc: PropTypes.string.isRequired,
-//   friendName: PropTypes.string.isRequired,
-//   friendStatus: PropTypes.bool.isRequired,
-// };
+TransactionHistory.propTypes = {
+  transactions: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      type: PropTypes.string,
+      amount: PropTypes.string,
+      currency: PropTypes.string,
+    })
+  ).isRequired,
+};

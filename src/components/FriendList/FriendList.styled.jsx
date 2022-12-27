@@ -28,7 +28,9 @@ export const FriendStatus = styled.span`
   margin-right: ${props => props.theme.space[5]}px;
   height: 16px;
   width: 16px;
-  background-color: ${props => (props.color ? `#4caf50` : `#f44336`)};
+  background-color: ${props =>
+    props.color === 'true' ? `#4caf50` : `#f44336`};
+  /* background-color: ${props => (props.color ? `#4caf50` : `#f44336`)}; */
   border-radius: ${props => props.theme.radii.round};
   color: ${props => props.theme.colors.primary};
 `;
